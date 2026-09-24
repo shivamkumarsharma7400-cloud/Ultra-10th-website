@@ -18,7 +18,7 @@
   document.addEventListener("keydown", event => {
     if (event.key === "Escape" && !menu.hidden) { closeMenu(); toggle.focus(); }
   });
-  window.matchMedia("(min-width: 761px)").addEventListener("change", event => { if (event.matches) closeMenu(); });
+  window.matchMedia("(min-width: 961px)").addEventListener("change", event => { if (event.matches) closeMenu(); });
   document.querySelector("[data-year]").textContent = String(new Date().getFullYear());
 
   let playStoreUrl;
@@ -49,8 +49,10 @@
       document.querySelectorAll("[data-youtube]").forEach(link => { link.href = url.href; });
     }
   } catch { /* Preserve the known channel link. */ }
-  const resources = [...document.querySelectorAll("details[name='resources']")];
-  resources.forEach(item => item.addEventListener("toggle", () => {
-    if (item.open) resources.forEach(other => { if (other !== item) other.open = false; });
-  }));
+  ["resources", "faq"].forEach(name => {
+    const group = [...document.querySelectorAll(`details[name="${name}"]`)];
+    group.forEach(item => item.addEventListener("toggle", () => {
+      if (item.open) group.forEach(other => { if (other !== item) other.open = false; });
+    }));
+  });
 })();

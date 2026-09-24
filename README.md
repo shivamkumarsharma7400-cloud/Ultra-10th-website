@@ -1,6 +1,8 @@
 # Ultra 10th
 
-A custom black-and-white presentation website for the Ultra 10th Class 10 education brand. The website introduces the brand and its study approach; study resources belong in the app.
+A custom black-and-white presentation website for Ultra 10th, a channel that helps students prepare for Class 10 board exams through cartoon-based chapter explanations and simple language. It explains the mission, teaching method and video study approach, introduces the planned app resources, and includes common questions and support contact details.
+
+The supplied Ultra 10th logo is used unchanged in the header, footer, app panel, favicon and touch icon. Support email: **ultra10th@gmail.com**.
 
 ## Preview locally
 
@@ -26,11 +28,13 @@ The same configuration file controls all YouTube links.
 
 ## Files
 
-- `dist/index.html` — page content, navigation and resource accordions.
+- `dist/index.html` — page content, navigation, resource and FAQ accordions, and email contact.
 - `dist/styles.css` — responsive monochrome visual system, including large-display styling.
-- `dist/app.js` — mobile navigation, resource accordion fallback and install link behavior.
+- `dist/app.js` — mobile navigation, resource/FAQ accordion fallback and install link behavior.
 - `dist/config.js` — editable destination URLs.
-- `dist/assets/study-art.webp` — original monochrome editorial illustration.
+- `dist/assets/ultra-10th-logo.jpg` — the exact user-supplied logo.
+- `dist/assets/cartoon-learning.webp` — original monochrome learning illustration; it is clearly identified as an illustration, not a channel screenshot.
+- `dist/assets/study-art.webp` — retained artwork from the earlier design.
 - `.openai/hosting.json` — static Sites publishing configuration.
 
 ## Publish anywhere
